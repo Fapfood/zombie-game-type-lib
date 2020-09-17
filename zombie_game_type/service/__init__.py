@@ -6,3 +6,6 @@ from .resource_pack import ResourcePackService
 from .skill import SkillService
 from .skill_level import SkillLevelService
 from .skill_pack import SkillPackService
+from .zone_room import ZoneRoomService
+from .zone_room_action import ZoneRoomActionService
+from .zone_room_filler import ZoneRoomFillerService
