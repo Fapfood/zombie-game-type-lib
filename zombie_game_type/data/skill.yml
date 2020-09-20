@@ -1,6 +1,16 @@
 list:
   - name: carpentry
-  - name: generic1
-  - name: generic2
-  - name: generic3
-  - name: generic4
+  - name: blacksmithing
+  - name: pharmacy
+  - name: hydraulics
+  - name: electrical wiring
+  - name: car mechanics
+  - name: mechanics
+  - name: fishing
+  - name: hunting
+  - name: herbal medicine
+  - name: chemistry
+  - name: ironwork
+  - name: roofing
+  - name: bartending
+  - name: cooking

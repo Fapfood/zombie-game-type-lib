@@ -1,0 +1,6 @@
+list:
+  - name: generic1
+    max_workers: 1
+    worker_icon_male: ''
+    worker_icon_female: ''
+    available_productions: []

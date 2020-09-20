@@ -46,9 +46,17 @@ list:
         resource:
           name: bottle of coke
         probability: 0.90
-    room_actions: []
+    room_actions:
+      - name: SEARCH
+        probability: 1.00
   - name: car trunk 1
     type:
       name: car trunk
-    resource_drop_table: []
-    room_actions: []
+    resource_drop_table:
+      - name: bottle of coke 0.90
+        resource:
+          name: bottle of coke
+        probability: 0.90
+    room_actions:
+      - name: SEARCH
+        probability: 1.00
