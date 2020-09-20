@@ -1,4 +1,6 @@
 name: sawmill
+category:
+  name: crafting
 max_workers: 3
 worker_icon_male: '👷‍♂️'
 worker_icon_female: '👷‍♀️'

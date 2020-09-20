@@ -1,6 +1,19 @@
 list:
-  - name: generic1
+  - name: pantry
+    category:
+      name: storage
     max_workers: 1
     worker_icon_male: ''
     worker_icon_female: ''
-    available_productions: []
+  - name: storeroom
+    category:
+      name: storage
+    max_workers: 1
+    worker_icon_male: ''
+    worker_icon_female: ''
+  - name: armory
+    category:
+      name: storage
+    max_workers: 1
+    worker_icon_male: ''
+    worker_icon_female: ''

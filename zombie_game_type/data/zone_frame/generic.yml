@@ -1,0 +1,9 @@
+name: generic
+category:
+  name: car
+entry: 1
+rooms:
+  - name: generic 1
+    category:
+      name: car cabin
+    order: 1
