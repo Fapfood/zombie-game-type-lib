@@ -7,7 +7,7 @@ class SkillLevelService(BaseService):
     def __init__(self,
                  skill_service: SkillService):
         self.skill_service = skill_service
-        super().__init__('skill_level.yml')
+        super().__init__('skill_level')
 
     def get_or_create_from_yaml(self, yaml: dict) -> SkillLevelModel:
         name = yaml.get('name')

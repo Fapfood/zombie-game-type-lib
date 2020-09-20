@@ -9,7 +9,7 @@ skill_level_static_service = SkillLevelService(skill_static_service)
 skill_pack_static_service = SkillPackService(skill_level_static_service)
 
 production_static_service = ProductionService(skill_pack_static_service, resource_pack_static_service)
-building_static_service = BuildingService(production_static_service)
+building_room_static_service = BuildingRoomService(production_static_service)
 
 zone_room_static_service = ZoneRoomService()
 zone_room_action_static_service = ZoneRoomActionService()

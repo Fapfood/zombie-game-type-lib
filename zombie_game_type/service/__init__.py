@@ -1,4 +1,4 @@
-from .building import BuildingService
+from .building_room import BuildingRoomService
 from .production import ProductionService
 from .resource import ResourceService
 from .resource_drop_probablility import ResourceDropProbabilityService

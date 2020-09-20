@@ -10,13 +10,14 @@ class ProductionService(BaseService):
                  resource_pack_service: ResourcePackService):
         self.skill_pack_service = skill_pack_service
         self.resource_pack_service = resource_pack_service
-        super().__init__('production.yml')
+        super().__init__('production')
 
     def get_or_create_from_yaml(self, yaml: dict) -> ProductionModel:
         name = yaml.get('name')
         el = self.get_by_name(name)
         if el is None:
             minutes = int(yaml.get('minutes'))
+            minimal_skills = self.skill_pack_service.get_or_create_bulk_from_yaml(yaml.get('minimal_skills', []))
             required_skills = self.skill_pack_service.get_or_create_bulk_from_yaml(yaml.get('required_skills', []))
             required_tools = self.resource_pack_service.get_or_create_bulk_from_yaml(yaml.get('required_tools', []))
             from_resources = self.resource_pack_service.get_or_create_bulk_from_yaml(yaml.get('from_resources', []))
@@ -26,6 +27,7 @@ class ProductionService(BaseService):
                 yaml.get('to_resources_interrupted', []))
             el = ProductionModel(name=name,
                                  minutes=minutes,
+                                 minimal_skills=minimal_skills,
                                  required_skills=required_skills,
                                  required_tools=required_tools,
                                  from_resources=from_resources,

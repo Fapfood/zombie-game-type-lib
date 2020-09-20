@@ -4,7 +4,7 @@ from ..model import SkillModel
 
 class SkillService(BaseService):
     def __init__(self):
-        super().__init__('skill.yml')
+        super().__init__('skill')
 
     def get_or_create_from_yaml(self, yaml: dict) -> SkillModel:
         name = yaml.get('name')

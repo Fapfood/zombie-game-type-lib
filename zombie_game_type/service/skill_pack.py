@@ -7,7 +7,7 @@ class SkillPackService(BaseService):
     def __init__(self,
                  skill_level_service: SkillLevelService):
         self.skill_level_service = skill_level_service
-        super().__init__('skill_pack.yml')
+        super().__init__('skill_pack')
 
     def get_or_create_from_yaml(self, yaml: dict) -> SkillPackModel:
         name = yaml.get('name')

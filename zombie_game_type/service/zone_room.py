@@ -4,7 +4,7 @@ from ..model import ZoneRoomModel
 
 class ZoneRoomService(BaseService):
     def __init__(self):
-        super().__init__('zone_room.yml')
+        super().__init__('zone_room')
 
     def get_or_create_from_yaml(self, yaml: dict) -> ZoneRoomModel:
         name = yaml.get('name')

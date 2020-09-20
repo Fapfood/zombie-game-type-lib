@@ -13,7 +13,7 @@ class ZoneRoomFillerService(BaseService):
         self.zone_room_service = zone_room_service
         self.resource_drop_probability_service = resource_drop_probability_service
         self.zone_room_action_service = zone_room_action_service
-        super().__init__('zone_room_filler.yml')
+        super().__init__('zone_room_filler')
 
     def get_or_create_from_yaml(self, yaml: dict) -> ZoneRoomFillerModel:
         name = yaml.get('name')

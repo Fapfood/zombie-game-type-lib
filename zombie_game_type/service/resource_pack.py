@@ -7,7 +7,7 @@ class ResourcePackService(BaseService):
     def __init__(self,
                  resource_service: ResourceService):
         self.resource_service = resource_service
-        super().__init__('resource_pack.yml')
+        super().__init__('resource_pack')
 
     def get_or_create_from_yaml(self, yaml: dict) -> ResourcePackModel:
         name = yaml.get('name')
