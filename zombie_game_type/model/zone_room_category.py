@@ -4,5 +4,5 @@ from ..base_model import BaseModel
 
 
 @dataclass(init=True, repr=True, eq=True, unsafe_hash=True, frozen=True)
-class ZoneRoomModel(BaseModel):
+class ZoneRoomCategoryModel(BaseModel):
     name: str
