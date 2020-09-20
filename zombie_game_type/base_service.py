@@ -11,17 +11,19 @@ class BaseService:
         self.data = {}
 
         file_name = '{}/data/{}.yml'.format(SCRIPT_DIR, name)
-        with open(file_name, encoding='utf8') as f:
-            lis = load(f.read(), Loader=FullLoader)['list']
-        self.get_or_create_bulk_from_yaml(lis)
+        if os.path.isfile(file_name):
+            with open(file_name, encoding='utf8') as f:
+                lis = load(f.read(), Loader=FullLoader)['list']
+            self.get_or_create_bulk_from_yaml(lis)
 
         dir_name = '{}/data/{}'.format(SCRIPT_DIR, name)
-        for _, _, file_names in os.walk(dir_name):
-            for file_name in file_names:
-                file_name = '{}/data/{}/{}'.format(SCRIPT_DIR, name, file_name)
-                with open(file_name, encoding='utf8') as f:
-                    el = load(f.read(), Loader=FullLoader)
-                self.get_or_create_from_yaml(el)
+        if os.path.isdir(dir_name):
+            for _, _, file_names in os.walk(dir_name):
+                for file_name in file_names:
+                    file_name = '{}/data/{}/{}'.format(SCRIPT_DIR, name, file_name)
+                    with open(file_name, encoding='utf8') as f:
+                        el = load(f.read(), Loader=FullLoader)
+                    self.get_or_create_from_yaml(el)
 
     def get_by_name(self, name: str):
         return self.data.get(name)
