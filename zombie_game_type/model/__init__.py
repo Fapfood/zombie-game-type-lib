@@ -1,4 +1,4 @@
-from .building import BuildingModel
+from .building_room import BuildingRoomModel
 from .production import ProductionModel
 from .resource import ResourceModel
 from .resource_drop_probability import ResourceDropProbabilityModel

@@ -7,6 +7,7 @@ from ..base_model import BaseModel
 class ProductionModel(BaseModel):
     name: str
     minutes: int
+    minimal_skills: frozenset
     required_skills: frozenset
     required_tools: frozenset
     from_resources: frozenset

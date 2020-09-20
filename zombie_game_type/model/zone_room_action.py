@@ -6,4 +6,4 @@ from ..base_model import BaseModel
 @dataclass(init=True, repr=True, eq=True, unsafe_hash=True, frozen=True)
 class ZoneRoomActionModel(BaseModel):
     name: str
-    probability: int
+    probability: float

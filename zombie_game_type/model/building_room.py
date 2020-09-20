@@ -4,7 +4,7 @@ from ..base_model import BaseModel
 
 
 @dataclass(init=True, repr=True, eq=True, unsafe_hash=True, frozen=True)
-class BuildingModel(BaseModel):
+class BuildingRoomModel(BaseModel):
     name: str
     max_workers: int
     worker_icon_male: str

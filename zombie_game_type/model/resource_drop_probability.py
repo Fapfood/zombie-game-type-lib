@@ -8,4 +8,4 @@ from ..base_model import BaseModel
 class ResourceDropProbabilityModel(BaseModel):
     name: str
     resource: ResourceModel
-    probability: int
+    probability: float
