@@ -1,3 +1,4 @@
+from .building_category import BuildingCategoryService
 from .building_room import BuildingRoomService
 from .production import ProductionService
 from .resource import ResourceService
@@ -6,6 +7,9 @@ from .resource_pack import ResourcePackService
 from .skill import SkillService
 from .skill_level import SkillLevelService
 from .skill_pack import SkillPackService
-from .zone_room import ZoneRoomService
+from .zone_category import ZoneCategoryService
+from .zone_frame import ZoneFrameService
 from .zone_room_action import ZoneRoomActionService
+from .zone_room_blank import ZoneRoomBlankService
+from .zone_room_category import ZoneRoomCategoryService
 from .zone_room_filler import ZoneRoomFillerService
